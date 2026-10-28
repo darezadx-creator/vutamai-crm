@@ -127,7 +127,7 @@
       <button onclick="filterIndustry('all', this)" class="badge-chip active flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 shadow-sm shrink-0">
         <i class="fa-solid fa-globe text-emerald-600 text-xs"></i>
         <span>Tất cả</span>
-        <span class="bg-slate-700 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-all">5</span>
+        <span class="bg-slate-700 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-all">6</span>
       </button>
 
       <!-- 1. Phong Thủy Tài Lộc 3 -->
@@ -148,7 +148,7 @@
       <button onclick="filterIndustry('song-khoe', this)" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-gray-600 hover:bg-white hover:text-gray-900 border border-transparent hover:border-gray-200 shrink-0">
         <i class="fa-solid fa-heart-pulse text-emerald-500 text-xs"></i>
         <span>Bí Kíp Sống Khỏe</span>
-        <span class="bg-emerald-600 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-songkhoe">1</span>
+        <span class="bg-emerald-600 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-songkhoe">2</span>
       </button>
 
       <!-- Website Bán Hàng vutamai.io.vn -->
@@ -189,7 +189,7 @@
       <div class="bg-white border border-gray-200 rounded-xl px-4 py-2.5 flex items-center justify-between shadow-xs">
         <div class="flex items-center space-x-2 text-xs">
           <span class="text-emerald-600 font-bold">✓ Đang theo dõi</span>
-          <span class="font-bold text-gray-800" id="tracking-count-text">5 kênh đại diện của Vũ Tâm AI</span>
+          <span class="font-bold text-gray-800" id="tracking-count-text">6 kênh đại diện của Vũ Tâm AI</span>
           <span class="text-gray-400">·</span>
           <span class="text-gray-500" id="last-sync-time">cập nhật 18:10</span>
         </div>
@@ -233,8 +233,8 @@
 
       <button onclick="filterPlatform('youtube', this)" class="tab-pill flex items-center space-x-2 pb-2">
         <i class="fa-brands fa-youtube text-red-600 text-sm"></i>
-        <span>YouTube (Phong Thủy)</span>
-        <span class="text-gray-400" id="platform-count-yt">1</span>
+        <span>YouTube</span>
+        <span class="text-gray-400" id="platform-count-yt">2</span>
       </button>
     </div>
 
@@ -289,7 +289,7 @@
       <div id="youtube-section" class="pt-2">
         <div class="flex items-center space-x-2 mb-3">
           <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
-          <span class="text-xs font-bold text-gray-700 tracking-wider">YOUTUBE (PHONG THỦY TÀI LỘC)</span>
+          <span class="text-xs font-bold text-gray-700 tracking-wider">YOUTUBE (2 KÊNH CHÍNH THỨC)</span>
           <span class="text-xs text-gray-400 font-semibold" id="youtube-section-count">1</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="youtube-cards-grid"></div>
@@ -513,6 +513,27 @@ const IMAGES_DATA = {
         recentPosts: [
           { title: "5 thói quen buổi sáng giúp cơ thể tràn đầy năng lượng và sống khỏe", time: "Sáng nay", likes: 42, comments: 15 },
           { title: "Dinh dưỡng khoa học nâng cao hệ miễn dịch tự nhiên", time: "Hôm qua", likes: 38, comments: 9 }
+        ]
+      },
+      {
+        id: "yt_mismatched",
+        name: "Mismatched - Tâm Lý & Sức Khỏe Con Người (ID: UCTuJ6jIgl5gmh15VK-38eEg)",
+        platform: "youtube",
+        industry: "song-khoe",
+        url: "https://www.youtube.com/channel/UCTuJ6jIgl5gmh15VK-38eEg",
+        avatar: IMAGES_DATA.songKhoeImg,
+        stats: {
+          "30d": { posts: 8, likes: 3200, comments: 450, shares: 26000 },
+          "7d": { posts: 2, likes: 980, comments: 140, shares: 7800 },
+          "90d": { posts: 22, likes: 9600, comments: 1250, shares: 74000 },
+          "today": { posts: 0, likes: 160, comments: 32, shares: 1400 },
+          "yesterday": { posts: 1, likes: 480, comments: 72, shares: 3900 },
+          "all": { posts: 38, likes: 24500, comments: 3100, shares: 185000 }
+        },
+        statusText: "Video mới tải lên 2 ngày trước",
+        recentPosts: [
+          { title: "Bí mật tâm lý con người và tiến hóa hành vi trong thế giới hiện đại", time: "2 ngày trước", likes: 480, comments: 72 },
+          { title: "Tại sao cơ thể và tâm trí hiện đại dễ rơi vào kiệt sức và căng thẳng?", time: "5 ngày trước", likes: 650, comments: 95 }
         ]
       }
     ];
