@@ -121,33 +121,40 @@
   <!-- ================= MAIN CONTENT ================= -->
   <main class="flex-1 flex flex-col min-w-0 overflow-y-auto px-6 py-5 md:px-10 md:py-7">
     
-    <!-- Top Filter Header: Industry Tags -->
-    <div class="flex items-center space-x-2 pb-6 border-b border-gray-200/80">
-      <!-- Tất cả 4 -->
-      <button onclick="filterIndustry('all', this)" class="badge-chip active flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 shadow-sm">
+    <!-- Top Filter Header: 3 NGÀNH HÀNG CỦA VŨ TÂM AI -->
+    <div class="flex items-center space-x-2 pb-6 border-b border-gray-200/80 overflow-x-auto">
+      <!-- Tất cả 5 -->
+      <button onclick="filterIndustry('all', this)" class="badge-chip active flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 shadow-sm shrink-0">
         <i class="fa-solid fa-globe text-emerald-600 text-xs"></i>
         <span>Tất cả</span>
-        <span class="bg-slate-700 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-all">4</span>
+        <span class="bg-slate-700 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-all">5</span>
       </button>
 
-      <!-- Phong Thủy & Tài Lộc -->
-      <button onclick="filterIndustry('phong-thuy', this)" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-gray-600 hover:bg-white hover:text-gray-900 border border-transparent hover:border-gray-200">
+      <!-- 1. Phong Thủy Tài Lộc 3 -->
+      <button onclick="filterIndustry('phong-thuy', this)" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-gray-600 hover:bg-white hover:text-gray-900 border border-transparent hover:border-gray-200 shrink-0">
         <i class="fa-solid fa-yin-yang text-amber-500 text-xs"></i>
         <span>Phong Thủy Tài Lộc</span>
-        <span class="bg-amber-600 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-phongthuy">2</span>
+        <span class="bg-amber-600 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-phongthuy">3</span>
       </button>
 
-      <!-- Vũ Tâm AI & Công nghệ -->
-      <button onclick="filterIndustry('ai', this)" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-gray-600 hover:bg-white hover:text-gray-900 border border-transparent hover:border-gray-200">
+      <!-- 2. KOL AI & Công nghệ 1 -->
+      <button onclick="filterIndustry('kol-ai', this)" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-gray-600 hover:bg-white hover:text-gray-900 border border-transparent hover:border-gray-200 shrink-0">
         <i class="fa-solid fa-brain text-teal-600 text-xs"></i>
-        <span>Vũ Tâm AI</span>
-        <span class="bg-teal-700 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-ai">2</span>
+        <span>KOL AI & Đào Tạo</span>
+        <span class="bg-teal-700 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-kolai">1</span>
+      </button>
+
+      <!-- 3. Bí Kíp Sống Khỏe Mỗi Ngày 1 -->
+      <button onclick="filterIndustry('song-khoe', this)" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-gray-600 hover:bg-white hover:text-gray-900 border border-transparent hover:border-gray-200 shrink-0">
+        <i class="fa-solid fa-heart-pulse text-emerald-500 text-xs"></i>
+        <span>Bí Kíp Sống Khỏe</span>
+        <span class="bg-emerald-600 text-white font-bold text-[10px] px-1.5 py-0.5 rounded-full ml-1" id="count-ind-songkhoe">1</span>
       </button>
 
       <!-- Website Bán Hàng vutamai.io.vn -->
-      <a href="https://www.vutamai.io.vn/" target="_blank" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold ml-auto">
+      <a href="https://www.vutamai.io.vn/" target="_blank" class="badge-chip flex items-center space-x-1.5 px-4 py-1.5 rounded-full text-xs text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold ml-auto shrink-0">
         <i class="fa-solid fa-store text-xs"></i>
-        <span>Xem Shop: vutamai.io.vn</span>
+        <span>vutamai.io.vn</span>
         <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
       </a>
     </div>
@@ -157,9 +164,9 @@
       <div>
         <div class="flex items-center space-x-2">
           <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Tương tác mạng xã hội</h1>
-          <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">Hệ thống Vũ Tâm AI</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">Vũ Tâm AI Official</span>
         </div>
-        <p class="text-xs text-gray-500 mt-1">Quản lý bài đăng, tương tác, bình luận đa kênh Facebook, TikTok & YouTube — tự cập nhật mỗi 5 phút.</p>
+        <p class="text-xs text-gray-500 mt-1">Quản lý bài đăng, tương tác theo 3 mảng: Phong Thủy Tài Lộc, KOL AI & Bí Kíp Sống Khỏe — tự cập nhật mỗi 5 phút.</p>
       </div>
 
       <!-- Action buttons -->
@@ -182,9 +189,9 @@
       <div class="bg-white border border-gray-200 rounded-xl px-4 py-2.5 flex items-center justify-between shadow-xs">
         <div class="flex items-center space-x-2 text-xs">
           <span class="text-emerald-600 font-bold">✓ Đang theo dõi</span>
-          <span class="font-bold text-gray-800" id="tracking-count-text">4 kênh chính thức Vũ Tâm AI (Facebook, TikTok & YouTube)</span>
+          <span class="font-bold text-gray-800" id="tracking-count-text">5 kênh đại diện của Vũ Tâm AI</span>
           <span class="text-gray-400">·</span>
-          <span class="text-gray-500" id="last-sync-time">cập nhật 17:15</span>
+          <span class="text-gray-500" id="last-sync-time">cập nhật 18:10</span>
         </div>
         <div class="flex items-center space-x-2 text-[11px] text-emerald-600 font-medium">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
@@ -196,7 +203,7 @@
       <div id="sync-notice-banner" class="bg-white border border-gray-200 rounded-xl px-4 py-2.5 flex items-center justify-between shadow-xs">
         <div class="flex items-center space-x-2.5 text-xs text-gray-700">
           <span class="text-amber-600">⏳</span>
-          <span class="font-medium" id="sync-status-detail">Đang đồng bộ số liệu từ 2 Fanpage Facebook, 1 TikTok và 1 kênh YouTube...</span>
+          <span class="font-medium" id="sync-status-detail">Đang đồng bộ số liệu 3 kênh Phong Thủy (gồm cả YouTube), 1 kênh KOL AI & 1 kênh Sống Khỏe...</span>
         </div>
         <div class="w-32 bg-gray-100 rounded-full h-1.5 overflow-hidden">
           <div id="sync-progress-bar" class="bg-emerald-500 h-1.5 rounded-full transition-all duration-500" style="width: 100%"></div>
@@ -209,13 +216,13 @@
       <button onclick="filterPlatform('all', this)" class="tab-pill active flex items-center space-x-2 pb-2">
         <i class="fa-solid fa-layer-group text-emerald-600"></i>
         <span>Tất cả</span>
-        <span class="text-gray-400" id="platform-count-all">4</span>
+        <span class="text-gray-400" id="platform-count-all">5</span>
       </button>
 
       <button onclick="filterPlatform('facebook', this)" class="tab-pill flex items-center space-x-2 pb-2">
         <i class="fa-brands fa-facebook text-blue-600 text-sm"></i>
         <span>Facebook</span>
-        <span class="text-gray-400" id="platform-count-fb">2</span>
+        <span class="text-gray-400" id="platform-count-fb">3</span>
       </button>
 
       <button onclick="filterPlatform('tiktok', this)" class="tab-pill flex items-center space-x-2 pb-2">
@@ -226,7 +233,7 @@
 
       <button onclick="filterPlatform('youtube', this)" class="tab-pill flex items-center space-x-2 pb-2">
         <i class="fa-brands fa-youtube text-red-600 text-sm"></i>
-        <span>YouTube</span>
+        <span>YouTube (Phong Thủy)</span>
         <span class="text-gray-400" id="platform-count-yt">1</span>
       </button>
     </div>
@@ -251,7 +258,7 @@
     <div class="mt-6 flex items-center justify-between">
       <div class="text-xs text-gray-500">
         <span class="font-bold text-gray-800 text-sm">Theo trang</span>
-        <span class="ml-2" id="grid-summary-text">4 kênh Vũ Tâm AI · số liệu 30 ngày · bấm để xem riêng</span>
+        <span class="ml-2" id="grid-summary-text">5 kênh Vũ Tâm AI · số liệu 30 ngày · bấm để xem riêng</span>
       </div>
     </div>
 
@@ -262,30 +269,30 @@
       <div id="facebook-section">
         <div class="flex items-center space-x-2 mb-3">
           <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
-          <span class="text-xs font-bold text-gray-700 tracking-wider">FACEBOOK (2 TRANG CHÍNH THỨC)</span>
-          <span class="text-xs text-gray-400 font-semibold" id="fb-section-count">2</span>
+          <span class="text-xs font-bold text-gray-700 tracking-wider">FACEBOOK (3 TRANG CHÍNH THỨC)</span>
+          <span class="text-xs text-gray-400 font-semibold" id="fb-section-count">3</span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4" id="facebook-cards-grid"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="facebook-cards-grid"></div>
       </div>
 
       <!-- Section: TIKTOK -->
       <div id="tiktok-section" class="pt-2">
         <div class="flex items-center space-x-2 mb-3">
           <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
-          <span class="text-xs font-bold text-gray-700 tracking-wider">TIKTOK (1 KÊNH)</span>
+          <span class="text-xs font-bold text-gray-700 tracking-wider">TIKTOK (PHONG THỦY TÀI LỘC)</span>
           <span class="text-xs text-gray-400 font-semibold" id="tiktok-section-count">1</span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4" id="tiktok-cards-grid"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="tiktok-cards-grid"></div>
       </div>
 
       <!-- Section: YOUTUBE -->
       <div id="youtube-section" class="pt-2">
         <div class="flex items-center space-x-2 mb-3">
           <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
-          <span class="text-xs font-bold text-gray-700 tracking-wider">YOUTUBE (1 KÊNH)</span>
+          <span class="text-xs font-bold text-gray-700 tracking-wider">YOUTUBE (PHONG THỦY TÀI LỘC)</span>
           <span class="text-xs text-gray-400 font-semibold" id="youtube-section-count">1</span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4" id="youtube-cards-grid"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="youtube-cards-grid"></div>
       </div>
 
     </div>
@@ -304,14 +311,14 @@
       <!-- Modal Header -->
       <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between bg-slate-50">
         <div class="flex items-center space-x-3">
-          <img id="modal-page-avatar" src="" alt="Avatar" class="w-11 h-11 rounded-full object-cover border border-gray-200">
+          <img id="modal-page-avatar" src="" alt="Avatar" class="w-13 h-13 rounded-full object-cover border-2 border-emerald-300 shadow-sm">
           <div>
             <div class="flex items-center space-x-2">
               <h3 id="modal-page-name" class="font-bold text-gray-800 text-base">Tên Kênh</h3>
               <span id="modal-page-platform" class="text-[10px] px-2 py-0.5 rounded-full font-semibold">Nền tảng</span>
               <span id="modal-page-industry" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-medium">Ngành</span>
             </div>
-            <p id="modal-page-id" class="text-xs text-gray-400 mt-0.5">Liên kết chính thức của Vũ Tâm AI</p>
+            <p id="modal-page-id" class="text-xs text-gray-400 mt-0.5">Liên kết chính thức của hệ thống Vũ Tâm AI</p>
           </div>
         </div>
         <button onclick="closeDetailModal()" class="w-8 h-8 rounded-full hover:bg-gray-200 flex items-center justify-center text-gray-500">
@@ -353,7 +360,7 @@
         <!-- Chart -->
         <div>
           <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2 flex items-center justify-between">
-            <span>Biểu đồ tương tác thời gian gần đây</span>
+            <span>Biểu đồ tương tác theo ngày</span>
             <span class="text-gray-400 font-normal">Hệ thống Vũ Tâm AI</span>
           </h4>
           <div class="bg-white border border-gray-100 rounded-xl p-3 h-52">
@@ -363,7 +370,7 @@
 
         <!-- Recent Posts List -->
         <div>
-          <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Nội dung nổi bật của kênh</h4>
+          <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Nội dung nổi bật gần đây</h4>
           <div class="space-y-2.5" id="modal-recent-posts"></div>
         </div>
 
@@ -372,12 +379,12 @@
       <!-- Modal Footer -->
       <div class="px-6 py-3 border-t border-gray-100 bg-gray-50 flex items-center justify-between text-xs">
         <a id="modal-page-link" href="#" target="_blank" class="text-emerald-700 hover:underline flex items-center space-x-1 font-semibold">
-          <span>Truy cập kênh trực tiếp</span>
+          <span>Mở xem kênh trực tiếp</span>
           <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
         </a>
         <div class="flex items-center space-x-2">
           <button onclick="closeDetailModal()" class="px-4 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-100 font-medium">Đóng</button>
-          <button onclick="alert('Đã gửi lệnh đồng bộ dữ liệu mới nhất cho kênh này!')" class="px-4 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 font-medium flex items-center space-x-1">
+          <button onclick="alert('Đã gửi yêu cầu đồng bộ tức thời cho kênh này!')" class="px-4 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 font-medium flex items-center space-x-1">
             <i class="fa-solid fa-rotate text-[11px]"></i>
             <span>Đồng bộ ngay</span>
           </button>
@@ -387,106 +394,30 @@
     </div>
   </div>
 
-  <!-- ================= MODAL: KẾT NỐI KÊNH MỚI ================= -->
-  <div id="connect-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4 backdrop-blur-xs">
-    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden">
-      <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between bg-slate-50">
-        <h3 class="font-bold text-gray-800 text-sm">Kết nối kênh mới vào Vũ Tâm AI</h3>
-        <button onclick="closeConnectModal()" class="text-gray-400 hover:text-gray-600">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div class="p-6 space-y-4 text-xs">
-        <div>
-          <label class="block font-medium text-gray-700 mb-1">Nền tảng</label>
-          <div class="grid grid-cols-3 gap-2">
-            <button type="button" onclick="selectPlatformForm('Facebook', this)" class="platform-choice-btn active border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-bold py-2 rounded-lg flex flex-col items-center justify-center space-y-1">
-              <i class="fa-brands fa-facebook text-blue-600 text-base"></i>
-              <span class="text-[11px]">Facebook</span>
-            </button>
-            <button type="button" onclick="selectPlatformForm('TikTok', this)" class="platform-choice-btn border border-gray-200 py-2 rounded-lg flex flex-col items-center justify-center space-y-1 text-gray-700 hover:bg-gray-50">
-              <i class="fa-brands fa-tiktok text-gray-800 text-base"></i>
-              <span class="text-[11px]">TikTok</span>
-            </button>
-            <button type="button" onclick="selectPlatformForm('YouTube', this)" class="platform-choice-btn border border-gray-200 py-2 rounded-lg flex flex-col items-center justify-center space-y-1 text-gray-700 hover:bg-gray-50">
-              <i class="fa-brands fa-youtube text-red-600 text-base"></i>
-              <span class="text-[11px]">YouTube</span>
-            </button>
-          </div>
-        </div>
-
-        <div>
-          <label class="block font-medium text-gray-700 mb-1">Tên Kênh / Tên Trang</label>
-          <input id="input-page-name" type="text" placeholder="Ví dụ: Vũ Tâm AI - Kênh Chăm Sóc Khách" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-xs outline-none focus:border-emerald-500">
-        </div>
-
-        <div>
-          <label class="block font-medium text-gray-700 mb-1">Đường dẫn (URL)</label>
-          <input id="input-page-url" type="text" placeholder="https://..." class="w-full border border-gray-300 rounded-lg px-3 py-2 text-xs outline-none focus:border-emerald-500">
-        </div>
-
-        <div>
-          <label class="block font-medium text-gray-700 mb-1">Phân loại ngành</label>
-          <select id="input-page-industry" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-xs outline-none focus:border-emerald-500">
-            <option value="phong-thuy">Phong Thủy Tài Lộc</option>
-            <option value="ai">Vũ Tâm AI & Công nghệ</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="px-6 py-3 border-t border-gray-100 bg-gray-50 flex justify-end space-x-2 text-xs">
-        <button onclick="closeConnectModal()" class="px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 font-medium">Hủy</button>
-        <button onclick="submitNewChannel()" class="px-4 py-2 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700">Lưu & Bắt đầu theo dõi</button>
-      </div>
-    </div>
-  </div>
-
   <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
-    // Dữ liệu chính thức của thương hiệu VŨ TÂM AI
+    // Dữ liệu chính thức chuẩn 3 nhóm ngành và ảnh thật của anh
     const vuTamChannels = [
+      // 1. NHÓM PHONG THỦY TÀI LỘC (3 KÊNH)
       {
-        id: "fb_1",
-        name: "Vũ Tâm AI - Fanpage Chính Thức (ID: 61594009754918)",
-        platform: "facebook",
-        industry: "ai",
-        url: "https://www.facebook.com/profile.php?id=61594009754918",
-        avatar: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&h=120&fit=crop",
-        stats: {
-          "30d": { posts: 14, likes: 128, comments: 45, shares: 19 },
-          "7d": { posts: 4, likes: 42, comments: 16, shares: 7 },
-          "90d": { posts: 38, likes: 350, comments: 110, shares: 52 },
-          "today": { posts: 1, likes: 12, comments: 5, shares: 2 },
-          "yesterday": { posts: 0, likes: 6, comments: 2, shares: 1 },
-          "all": { posts: 56, likes: 580, comments: 190, shares: 84 }
-        },
-        statusText: "Bình luận gần nhất 2 giờ trước",
-        lastActivityDate: "2026-10-28 15:00",
-        recentPosts: [
-          { title: "Giải pháp ứng dụng Vũ Tâm AI tự động hóa chăm sóc khách hàng 24/7", time: "2 giờ trước", likes: 24, comments: 11 },
-          { title: "Cập nhật tính năng kết nối đa kênh Facebook, TikTok và YouTube trên vutamai.io.vn", time: "1 ngày trước", likes: 35, comments: 8 }
-        ]
-      },
-      {
-        id: "fb_2",
-        name: "Phong Thủy Tài Lộc - Vũ Tâm (ID: 61588895655775)",
-        platform: "facebook",
+        id: "yt_1",
+        name: "Phong Thủy Tài Lộc - Kênh YouTube Chính Thức",
+        platform: "youtube",
         industry: "phong-thuy",
-        url: "https://www.facebook.com/profile.php?id=61588895655775",
-        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop",
+        url: "https://www.youtube.com/channel/UCq_ziIyVd31QxFzi4pk7q3A/",
+        avatar: "images/phong-thuy.jpg",
         stats: {
-          "30d": { posts: 21, likes: 340, comments: 89, shares: 42 },
-          "7d": { posts: 6, likes: 95, comments: 28, shares: 14 },
-          "90d": { posts: 52, likes: 890, comments: 240, shares: 115 },
-          "today": { posts: 1, likes: 18, comments: 7, shares: 3 },
-          "yesterday": { posts: 1, likes: 25, comments: 9, shares: 4 },
-          "all": { posts: 78, likes: 1450, comments: 410, shares: 180 }
+          "30d": { posts: 14, likes: 2450, comments: 380, shares: 18200 },
+          "7d": { posts: 3, likes: 620, comments: 95, shares: 4500 },
+          "90d": { posts: 38, likes: 7800, comments: 980, shares: 52000 },
+          "today": { posts: 1, likes: 120, comments: 24, shares: 890 },
+          "yesterday": { posts: 0, likes: 85, comments: 14, shares: 620 },
+          "all": { posts: 65, likes: 19500, comments: 2400, shares: 128000 }
         },
-        statusText: "Bài đăng mới hôm nay",
-        lastActivityDate: "2026-10-28 11:30",
+        statusText: "Video mới đăng hôm nay",
         recentPosts: [
-          { title: "Bí quyết bố trí bàn làm việc kích hoạt cung tài lộc gia tăng may mắn", time: "Hôm nay", likes: 18, comments: 7 },
-          { title: "Vật phẩm phong thủy chiêu tài rước lộc cho gia chủ năm 2026", time: "Hôm qua", likes: 25, comments: 9 }
+          { title: "Cách bài trí phong thủy thu hút vượng khí tài lộc cho gia chủ", time: "Hôm nay", likes: 120, comments: 24 },
+          { title: "Kích hoạt cung tài lộc gia đạo bình an năm 2026", time: "3 ngày trước", likes: 215, comments: 38 }
         ]
       },
       {
@@ -495,42 +426,86 @@
         platform: "tiktok",
         industry: "phong-thuy",
         url: "https://www.tiktok.com/@phongthuytailoc.688",
-        avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&h=120&fit=crop",
+        avatar: "images/phong-thuy.jpg",
         stats: {
-          "30d": { posts: 12, likes: 3200, comments: 410, shares: 680 },
-          "7d": { posts: 3, likes: 950, comments: 120, shares: 210 },
-          "90d": { posts: 35, likes: 9800, comments: 1250, shares: 1900 },
-          "today": { posts: 1, likes: 240, comments: 35, shares: 50 },
-          "yesterday": { posts: 0, likes: 110, comments: 18, shares: 25 },
-          "all": { posts: 68, likes: 24500, comments: 3100, shares: 4200 }
+          "30d": { posts: 18, likes: 4800, comments: 520, shares: 980 },
+          "7d": { posts: 4, likes: 1200, comments: 140, shares: 290 },
+          "90d": { posts: 45, likes: 14500, comments: 1890, shares: 2800 },
+          "today": { posts: 1, likes: 310, comments: 45, shares: 70 },
+          "yesterday": { posts: 1, likes: 190, comments: 28, shares: 42 },
+          "all": { posts: 84, likes: 32000, comments: 4100, shares: 5900 }
         },
         statusText: "Video mới đăng 1 ngày trước",
-        lastActivityDate: "2026-10-27 18:20",
         recentPosts: [
-          { title: "Xem thế nhà đón vượng khí tài lộc 688", time: "1 ngày trước", likes: 520, comments: 85 },
-          { title: "Những lưu ý phong thủy cửa chính không nên bỏ qua", time: "3 ngày trước", likes: 780, comments: 110 }
+          { title: "Thế nhà đón lộc hút tài vận may mắn 688", time: "1 ngày trước", likes: 520, comments: 85 },
+          { title: "Vật phẩm phong thủy chiêu tài rước vượng khí", time: "3 ngày trước", likes: 780, comments: 110 }
         ]
       },
       {
-        id: "yt_1",
-        name: "Kênh YouTube Chính Thức - Vũ Tâm AI",
-        platform: "youtube",
-        industry: "ai",
-        url: "https://www.youtube.com/channel/UCq_ziIyVd31QxFzi4pk7q3A/",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop",
+        id: "fb_phongthuy",
+        name: "Phong Thủy Tài Lộc - Vũ Tâm (ID: 61588895655775)",
+        platform: "facebook",
+        industry: "phong-thuy",
+        url: "https://www.facebook.com/profile.php?id=61588895655775",
+        avatar: "images/phong-thuy.jpg",
         stats: {
-          "30d": { posts: 8, likes: 1850, comments: 240, shares: 12400 },
-          "7d": { posts: 2, likes: 540, comments: 75, shares: 3800 },
-          "90d": { posts: 22, likes: 5200, comments: 690, shares: 34000 },
-          "today": { posts: 0, likes: 80, comments: 15, shares: 620 },
-          "yesterday": { posts: 1, likes: 210, comments: 32, shares: 1450 },
-          "all": { posts: 48, likes: 14200, comments: 1890, shares: 98000 }
+          "30d": { posts: 22, likes: 410, comments: 115, shares: 58 },
+          "7d": { posts: 5, likes: 110, comments: 32, shares: 18 },
+          "90d": { posts: 58, likes: 1150, comments: 320, shares: 145 },
+          "today": { posts: 1, likes: 25, comments: 8, shares: 4 },
+          "yesterday": { posts: 1, likes: 32, comments: 11, shares: 6 },
+          "all": { posts: 92, likes: 1890, comments: 510, shares: 230 }
         },
-        statusText: "Video mới tải lên hôm qua",
-        lastActivityDate: "2026-10-27 14:00",
+        statusText: "Bình luận gần nhất 1 giờ trước",
         recentPosts: [
-          { title: "Hướng dẫn cài đặt và vận hành hệ thống CRM Vũ Tâm AI", time: "Hôm qua", likes: 210, comments: 32 },
-          { title: "Ứng dụng công nghệ AI vào kinh doanh online thời đại mới", time: "4 ngày trước", likes: 315, comments: 48 }
+          { title: "Bí quyết chọn ngày tốt xuất hành khai trương chiêu tài", time: "1 giờ trước", likes: 25, comments: 8 },
+          { title: "Tư vấn phong thủy nhà ở chuẩn khoa học", time: "Hôm qua", likes: 32, comments: 11 }
+        ]
+      },
+
+      // 2. NHÓM KOL AI & ĐÀO TẠO (1 KÊNH)
+      {
+        id: "fb_kolai",
+        name: "Vũ Tâm AI - KOL AI System (ID: 61594009754918)",
+        platform: "facebook",
+        industry: "kol-ai",
+        url: "https://www.facebook.com/profile.php?id=61594009754918",
+        avatar: "images/kol-ai.jpg",
+        stats: {
+          "30d": { posts: 16, likes: 380, comments: 95, shares: 42 },
+          "7d": { posts: 4, likes: 98, comments: 28, shares: 12 },
+          "90d": { posts: 42, likes: 980, comments: 240, shares: 98 },
+          "today": { posts: 1, likes: 34, comments: 12, shares: 5 },
+          "yesterday": { posts: 0, likes: 18, comments: 5, shares: 2 },
+          "all": { posts: 68, likes: 1650, comments: 420, shares: 180 }
+        },
+        statusText: "Bài đăng Lễ Tốt Nghiệp KOL AI",
+        recentPosts: [
+          { title: "KOL AI System - Lễ tốt nghiệp khóa đào tạo Content Engine cùng Vũ Tâm", time: "Hôm nay", likes: 34, comments: 12 },
+          { title: "Ứng dụng Trợ lý AI tự động hóa chăm sóc khách hàng đa kênh 24/7", time: "2 ngày trước", likes: 45, comments: 16 }
+        ]
+      },
+
+      // 3. NHÓM BÍ KÍP SỐNG KHỎE MỖI NGÀY (1 KÊNH)
+      {
+        id: "fb_songkhoe",
+        name: "Bí Kíp Sống Khỏe Mỗi Ngày - Vũ Tâm AI",
+        platform: "facebook",
+        industry: "song-khoe",
+        url: "https://www.vutamai.io.vn/",
+        avatar: "images/song-khoe.jpg",
+        stats: {
+          "30d": { posts: 25, likes: 520, comments: 140, shares: 85 },
+          "7d": { posts: 6, likes: 145, comments: 38, shares: 22 },
+          "90d": { posts: 64, likes: 1380, comments: 390, shares: 210 },
+          "today": { posts: 1, likes: 42, comments: 15, shares: 8 },
+          "yesterday": { posts: 1, likes: 38, comments: 9, shares: 6 },
+          "all": { posts: 110, likes: 2400, comments: 680, shares: 350 }
+        },
+        statusText: "Chia sẻ bài viết sáng nay",
+        recentPosts: [
+          { title: "5 thói quen buổi sáng giúp cơ thể tràn đầy năng lượng và sống khỏe", time: "Sáng nay", likes: 42, comments: 15 },
+          { title: "Dinh dưỡng khoa học nâng cao hệ miễn dịch tự nhiên", time: "Hôm qua", likes: 38, comments: 9 }
         ]
       }
     ];
@@ -566,10 +541,16 @@
       document.getElementById('fb-section-count').innerText = fbPages.length;
       document.getElementById('tiktok-section-count').innerText = ttPages.length;
       document.getElementById('youtube-section-count').innerText = ytPages.length;
+
       document.getElementById('platform-count-all').innerText = pagesData.length;
       document.getElementById('platform-count-fb').innerText = pagesData.filter(p => p.platform === 'facebook').length;
       document.getElementById('platform-count-tiktok').innerText = pagesData.filter(p => p.platform === 'tiktok').length;
       document.getElementById('platform-count-yt').innerText = pagesData.filter(p => p.platform === 'youtube').length;
+
+      document.getElementById('count-ind-all').innerText = pagesData.length;
+      document.getElementById('count-ind-phongthuy').innerText = pagesData.filter(p => p.industry === 'phong-thuy').length;
+      document.getElementById('count-ind-kolai').innerText = pagesData.filter(p => p.industry === 'kol-ai').length;
+      document.getElementById('count-ind-songkhoe').innerText = pagesData.filter(p => p.industry === 'song-khoe').length;
 
       document.getElementById('grid-summary-text').innerText = `${filtered.length} kênh Vũ Tâm AI · số liệu ${getTimeLabel(selectedTime)} · bấm để xem riêng`;
 
@@ -596,7 +577,7 @@
       const metricIcon4 = page.platform === 'youtube' ? '👁️' : '🔁';
 
       card.innerHTML = `
-        <img src="${page.avatar}" alt="${page.name}" class="w-13 h-13 rounded-full object-cover shrink-0 border-2 border-emerald-100 shadow-xs">
+        <img src="${page.avatar}" alt="${page.name}" class="w-13 h-13 rounded-full object-cover shrink-0 border-2 border-emerald-200 shadow-xs">
         <div class="flex-1 min-w-0">
           <div class="flex items-center justify-between">
             <h4 class="font-bold text-gray-900 text-xs truncate pr-2 hover:text-emerald-700" title="${page.name}">
@@ -660,7 +641,7 @@
 
       icon.classList.add('fa-spin');
       text.innerText = 'Đang đồng bộ...';
-      detail.innerText = 'Đang kết nối Facebook, TikTok (@phongthuytailoc.688) & YouTube của Vũ Tâm AI...';
+      detail.innerText = 'Đang đồng bộ 3 kênh Phong Thủy (gồm YouTube), 1 kênh KOL AI & 1 kênh Sống Khỏe...';
 
       setTimeout(() => {
         icon.classList.remove('fa-spin');
@@ -668,7 +649,7 @@
         const now = new Date();
         const timeStr = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
         document.getElementById('last-sync-time').innerText = `cập nhật ${timeStr}`;
-        detail.innerText = 'Đã hoàn tất đồng bộ 4 kênh chính thức của Vũ Tâm AI.';
+        detail.innerText = 'Đã hoàn tất đồng bộ 5 kênh chính thức của Vũ Tâm AI.';
       }, 1200);
     }
 
@@ -681,10 +662,14 @@
       document.getElementById('modal-page-name').innerText = page.name;
       document.getElementById('modal-page-link').href = page.url;
 
-      const platformMap = { facebook: 'Facebook Page', tiktok: 'TikTok Account', youtube: 'YouTube Channel' };
+      const platformMap = { facebook: 'Facebook Page', tiktok: 'TikTok Account', youtube: 'YouTube Channel (Phong Thủy)' };
       document.getElementById('modal-page-platform').innerText = platformMap[page.platform] || page.platform;
 
-      const industryMap = { 'phong-thuy': 'Phong Thủy Tài Lộc', 'ai': 'Vũ Tâm AI & Công nghệ' };
+      const industryMap = {
+        'phong-thuy': 'Phong Thủy Tài Lộc',
+        'kol-ai': 'KOL AI & Đào Tạo',
+        'song-khoe': 'Bí Kíp Sống Khỏe Mỗi Ngày'
+      };
       document.getElementById('modal-page-industry').innerText = industryMap[page.industry] || page.industry;
 
       const s = page.stats[selectedTime] || { posts: 0, likes: 0, comments: 0, shares: 0 };
@@ -734,7 +719,7 @@
           datasets: [
             {
               label: 'Lượt thích (Likes)',
-              data: [15, 28, 22, 45, 38, 62, 54],
+              data: [25, 42, 38, 65, 55, 88, 72],
               borderColor: '#3b82f6',
               backgroundColor: 'rgba(59, 130, 246, 0.08)',
               tension: 0.35,
@@ -742,7 +727,7 @@
             },
             {
               label: 'Bình luận (Comments)',
-              data: [5, 12, 9, 18, 14, 25, 20],
+              data: [8, 16, 14, 25, 20, 38, 29],
               borderColor: '#10b981',
               backgroundColor: 'rgba(16, 185, 129, 0.08)',
               tension: 0.35,
@@ -757,54 +742,6 @@
           scales: { y: { beginAtZero: true, ticks: { font: { size: 10 } } }, x: { ticks: { font: { size: 10 } } } }
         }
       });
-    }
-
-    function openConnectModal() {
-      document.getElementById('connect-modal').classList.remove('hidden');
-    }
-    function closeConnectModal() {
-      document.getElementById('connect-modal').classList.add('hidden');
-    }
-
-    let selectedPlatformChoice = 'Facebook';
-    function selectPlatformForm(plt, btn) {
-      selectedPlatformChoice = plt;
-      document.querySelectorAll('.platform-choice-btn').forEach(b => {
-        b.className = "platform-choice-btn border border-gray-200 py-2 rounded-lg flex flex-col items-center justify-center space-y-1 text-gray-700 hover:bg-gray-50";
-      });
-      btn.className = "platform-choice-btn active border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-bold py-2 rounded-lg flex flex-col items-center justify-center space-y-1";
-    }
-
-    function submitNewChannel() {
-      const name = document.getElementById('input-page-name').value.trim();
-      const url = document.getElementById('input-page-url').value.trim();
-      const ind = document.getElementById('input-page-industry').value;
-      if (!name) { alert('Vui lòng nhập tên kênh!'); return; }
-
-      const newChan = {
-        id: "chan_" + Date.now(),
-        name: name,
-        platform: selectedPlatformChoice.toLowerCase(),
-        industry: ind,
-        url: url || "https://www.vutamai.io.vn/",
-        avatar: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&h=120&fit=crop",
-        stats: {
-          "30d": { posts: 1, likes: 10, comments: 2, shares: 5 },
-          "7d": { posts: 1, likes: 10, comments: 2, shares: 5 },
-          "90d": { posts: 1, likes: 10, comments: 2, shares: 5 },
-          "today": { posts: 0, likes: 0, comments: 0, shares: 0 },
-          "yesterday": { posts: 0, likes: 0, comments: 0, shares: 0 },
-          "all": { posts: 1, likes: 10, comments: 2, shares: 5 }
-        },
-        statusText: "Vừa thêm mới",
-        lastActivityDate: new Date().toISOString(),
-        recentPosts: []
-      };
-
-      pagesData.unshift(newChan);
-      closeConnectModal();
-      renderCards();
-      alert(`Đã thêm thành công kênh "${name}" vào danh sách theo dõi của Vũ Tâm AI!`);
     }
 
     function switchNav(el) {
